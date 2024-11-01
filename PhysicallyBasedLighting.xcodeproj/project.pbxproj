@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEB320292CCF44C500FCD5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB320282CCF44C500FCD5F3 /* Assets.xcassets */; };
+		EEB3202C2CCF44C500FCD5F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB3202A2CCF44C500FCD5F3 /* Main.storyboard */; };
+		EEB320382CCF45A500FCD5F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB320312CCF45A500FCD5F3 /* AppDelegate.swift */; };
+		EEB320392CCF45A500FCD5F3 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB320322CCF45A500FCD5F3 /* Node.swift */; };
+		EEB3203A2CCF45A500FCD5F3 /* OpenGLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB320332CCF45A500FCD5F3 /* OpenGLRenderer.swift */; };
+		EEB3203B2CCF45A500FCD5F3 /* OpenGLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB320342CCF45A500FCD5F3 /* OpenGLViewController.swift */; };
+		EEB3203C2CCF45A500FCD5F3 /* PBR.frag in Resources */ = {isa = PBXBuildFile; fileRef = EEB320352CCF45A500FCD5F3 /* PBR.frag */; };
+		EEB3203D2CCF45A500FCD5F3 /* PBR.vert in Resources */ = {isa = PBXBuildFile; fileRef = EEB320362CCF45A500FCD5F3 /* PBR.vert */; };
+		EEB3203E2CCF45A500FCD5F3 /* TexturesMaterials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB320372CCF45A500FCD5F3 /* TexturesMaterials.swift */; };
+		EEB3203F2CCF463A00FCD5F3 /* VirtualCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46ABF12CA6229F00B64C6C /* VirtualCamera.m */; };
+		EEB320412CCF468300FCD5F3 /* gold in Resources */ = {isa = PBXBuildFile; fileRef = EEAF3F1D2CB27C3D00CC87CE /* gold */; };
+		EEB320422CCF468600FCD5F3 /* grass in Resources */ = {isa = PBXBuildFile; fileRef = EEAF3F272CB28D0200CC87CE /* grass */; };
+		EEB320432CCF468A00FCD5F3 /* plastic in Resources */ = {isa = PBXBuildFile; fileRef = EEAF3F282CB28D0200CC87CE /* plastic */; };
+		EEB320442CCF468D00FCD5F3 /* rusted_iron in Resources */ = {isa = PBXBuildFile; fileRef = EEAF3F292CB28D0200CC87CE /* rusted_iron */; };
+		EEB320452CCF469000FCD5F3 /* wall in Resources */ = {isa = PBXBuildFile; fileRef = EEAF3F2A2CB28D0200CC87CE /* wall */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE14C7792C5E25DD001EDE66 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		EE14C77D2C5E4FC3001EDE66 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		EE46ABF02CA6229F00B64C6C /* VirtualCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualCamera.h; sourceTree = "<group>"; };
+		EE46ABF12CA6229F00B64C6C /* VirtualCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualCamera.m; sourceTree = "<group>"; };
+		EE59059C2CBF5AEB006D71BF /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; wrapsLines = 1; };
+		EEAF3F1D2CB27C3D00CC87CE /* gold */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gold; sourceTree = "<group>"; };
+		EEAF3F272CB28D0200CC87CE /* grass */ = {isa = PBXFileReference; lastKnownFileType = folder; path = grass; sourceTree = "<group>"; };
+		EEAF3F282CB28D0200CC87CE /* plastic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plastic; sourceTree = "<group>"; };
+		EEAF3F292CB28D0200CC87CE /* rusted_iron */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rusted_iron; sourceTree = "<group>"; };
+		EEAF3F2A2CB28D0200CC87CE /* wall */ = {isa = PBXFileReference; lastKnownFileType = folder; path = wall; sourceTree = "<group>"; };
+		EEB320222CCF44C500FCD5F3 /* pbrLightingTextured.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pbrLightingTextured.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB320282CCF44C500FCD5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEB3202B2CCF44C500FCD5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEB3202D2CCF44C500FCD5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB320312CCF45A500FCD5F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEB320322CCF45A500FCD5F3 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		EEB320332CCF45A500FCD5F3 /* OpenGLRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLRenderer.swift; sourceTree = "<group>"; };
+		EEB320342CCF45A500FCD5F3 /* OpenGLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLViewController.swift; sourceTree = "<group>"; };
+		EEB320352CCF45A500FCD5F3 /* PBR.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = PBR.frag; path = Shaders/PBR.frag; sourceTree = "<group>"; };
+		EEB320362CCF45A500FCD5F3 /* PBR.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = PBR.vert; path = Shaders/PBR.vert; sourceTree = "<group>"; };
+		EEB320372CCF45A500FCD5F3 /* TexturesMaterials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TexturesMaterials.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEB3201F2CCF44C500FCD5F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE14C7782C5E25C2001EDE66 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EE46ABF02CA6229F00B64C6C /* VirtualCamera.h */,
+				EE46ABF12CA6229F00B64C6C /* VirtualCamera.m */,
+				EE14C77D2C5E4FC3001EDE66 /* Common.h */,
+				EE14C7792C5E25DD001EDE66 /* Bridging-Header.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EE84DB752A2A0CFF00EEF2A1 = {
+			isa = PBXGroup;
+			children = (
+				EE59059C2CBF5AEB006D71BF /* Readme.md */,
+				EE14C7782C5E25C2001EDE66 /* Common */,
+				EE84DB972A2A12D200EEF2A1 /* Models */,
+				EEB320232CCF44C500FCD5F3 /* pbrLightingTextured */,
+				EE84DB7F2A2A0CFF00EEF2A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE84DB7F2A2A0CFF00EEF2A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEB320222CCF44C500FCD5F3 /* pbrLightingTextured.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE84DB972A2A12D200EEF2A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEAF3F0E2CB2388C00CC87CE /* PBR */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEAF3F0E2CB2388C00CC87CE /* PBR */ = {
+			isa = PBXGroup;
+			children = (
+				EEAF3F1D2CB27C3D00CC87CE /* gold */,
+				EEAF3F272CB28D0200CC87CE /* grass */,
+				EEAF3F282CB28D0200CC87CE /* plastic */,
+				EEAF3F292CB28D0200CC87CE /* rusted_iron */,
+				EEAF3F2A2CB28D0200CC87CE /* wall */,
+			);
+			name = PBR;
+			sourceTree = "<group>";
+		};
+		EEB320232CCF44C500FCD5F3 /* pbrLightingTextured */ = {
+			isa = PBXGroup;
+			children = (
+				EEB320312CCF45A500FCD5F3 /* AppDelegate.swift */,
+				EEB320332CCF45A500FCD5F3 /* OpenGLRenderer.swift */,
+				EEB320342CCF45A500FCD5F3 /* OpenGLViewController.swift */,
+				EEB320322CCF45A500FCD5F3 /* Node.swift */,
+				EEB320372CCF45A500FCD5F3 /* TexturesMaterials.swift */,
+				EEB320462CCF478700FCD5F3 /* Shaders */,
+				EEB320282CCF44C500FCD5F3 /* Assets.xcassets */,
+				EEB3202A2CCF44C500FCD5F3 /* Main.storyboard */,
+				EEB3202D2CCF44C500FCD5F3 /* Info.plist */,
+			);
+			path = pbrLightingTextured;
+			sourceTree = "<group>";
+		};
+		EEB320462CCF478700FCD5F3 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EEB320352CCF45A500FCD5F3 /* PBR.frag */,
+				EEB320362CCF45A500FCD5F3 /* PBR.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEB320212CCF44C500FCD5F3 /* pbrLightingTextured */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEB3202E2CCF44C500FCD5F3 /* Build configuration list for PBXNativeTarget "pbrLightingTextured" */;
+			buildPhases = (
+				EEB3201E2CCF44C500FCD5F3 /* Sources */,
+				EEB3201F2CCF44C500FCD5F3 /* Frameworks */,
+				EEB320202CCF44C500FCD5F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pbrLightingTextured;
+			productName = pbrLightingTextured;
+			productReference = EEB320222CCF44C500FCD5F3 /* pbrLightingTextured.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE84DB762A2A0CFF00EEF2A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mark Lim Pak Mun";
+				TargetAttributes = {
+					EEB320212CCF44C500FCD5F3 = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE84DB792A2A0CFF00EEF2A1 /* Build configuration list for PBXProject "PhysicallyBasedLighting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE84DB752A2A0CFF00EEF2A1;
+			productRefGroup = EE84DB7F2A2A0CFF00EEF2A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEB320212CCF44C500FCD5F3 /* pbrLightingTextured */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEB320202CCF44C500FCD5F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB320292CCF44C500FCD5F3 /* Assets.xcassets in Resources */,
+				EEB3202C2CCF44C500FCD5F3 /* Main.storyboard in Resources */,
+				EEB3203C2CCF45A500FCD5F3 /* PBR.frag in Resources */,
+				EEB3203D2CCF45A500FCD5F3 /* PBR.vert in Resources */,
+				EEB320412CCF468300FCD5F3 /* gold in Resources */,
+				EEB320422CCF468600FCD5F3 /* grass in Resources */,
+				EEB320432CCF468A00FCD5F3 /* plastic in Resources */,
+				EEB320442CCF468D00FCD5F3 /* rusted_iron in Resources */,
+				EEB320452CCF469000FCD5F3 /* wall in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEB3201E2CCF44C500FCD5F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB320382CCF45A500FCD5F3 /* AppDelegate.swift in Sources */,
+				EEB3203B2CCF45A500FCD5F3 /* OpenGLViewController.swift in Sources */,
+				EEB3203A2CCF45A500FCD5F3 /* OpenGLRenderer.swift in Sources */,
+				EEB320392CCF45A500FCD5F3 /* Node.swift in Sources */,
+				EEB3203E2CCF45A500FCD5F3 /* TexturesMaterials.swift in Sources */,
+				EEB3203F2CCF463A00FCD5F3 /* VirtualCamera.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEB3202A2CCF44C500FCD5F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEB3202B2CCF44C500FCD5F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE84DB8C2A2A0D0200EEF2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EE84DB8D2A2A0D0200EEF2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		EEB3202F2CCF44C500FCD5F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = pbrLightingTextured/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incrementalinnovations.pbrLightingTextured;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EEB320302CCF44C500FCD5F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = pbrLightingTextured/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incrementalinnovations.pbrLightingTextured;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE84DB792A2A0CFF00EEF2A1 /* Build configuration list for PBXProject "PhysicallyBasedLighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE84DB8C2A2A0D0200EEF2A1 /* Debug */,
+				EE84DB8D2A2A0D0200EEF2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEB3202E2CCF44C500FCD5F3 /* Build configuration list for PBXNativeTarget "pbrLightingTextured" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEB3202F2CCF44C500FCD5F3 /* Debug */,
+				EEB320302CCF44C500FCD5F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE84DB762A2A0CFF00EEF2A1 /* Project object */;
+}
