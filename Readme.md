@@ -8,12 +8,12 @@ Implementation of the main rendering loop requires matrix and vector operations.
 
 The vertex and fragment shaders are a port of those in LearnOpenGL.com's **pbrLightingTextured** demo. 
 
-Notes:
+**Notes:**
 
 Local tangent space calculations can be performed in world space or eye space. If the computations are in world space, the eye/camera's position must be passed as a uniform to the shader(s). On the other hand, if the computations are done in eye space, the camera's position is not passed. The eye's'/camera's position is always at (0.0, 0.0, 0.0). 
 
 
-Problem(s):
+**Problem(s):**
 
 On macOS 10.12 or earlier: the **urlValue** property of an instance of **MDLMaterialProperty** returns a NIL. To work around the problem, use the **stringValue** property to load the texture file.
 
