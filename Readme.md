@@ -27,6 +27,11 @@ Given below is a window capture of the output rendered by the demo **pbrLighting
 
 Fix a bug in the vertex shader.
 
+```glsl
+
+    worldNormal = normalize(uNormalMatrix * mcNormal);
+
+```
 
 **Requirements:**
 
