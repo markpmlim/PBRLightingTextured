@@ -16,7 +16,6 @@ struct UseTextures {
 
 uniform UseTextures useTexture;
 
-// Can this be encapsulate with the std140 layout? No
 uniform sampler2D baseColourTexture;    // map_Kd
 uniform sampler2D normalTexture;        // map_tangentSpaceNormal/map_bump
 uniform sampler2D metallicTexture;      // map_metallic
