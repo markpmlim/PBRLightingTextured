@@ -199,7 +199,6 @@ class OpenGLRenderer: NSObject
         glUseProgram(glslProgram)
         let viewMatrixLoc = glGetUniformLocation(glslProgram, "uViewMatrix")
         let projectionMatrixLoc = glGetUniformLocation(glslProgram, "uProjectionMatrix")
-        let normalMatrixLoc = glGetUniformLocation(glslProgram, "uNormalMatrix")
 
         let orientationMatrix = GLKMatrix4MakeWithQuaternion(camera.orientation)
         viewMatrix = GLKMatrix4Multiply(camera.viewMatrix, orientationMatrix)
@@ -229,15 +228,6 @@ class OpenGLRenderer: NSObject
                            projectionMatrix.array)
 
         for node in nodes {
-            let modelMatrix = node.worldTransform
-            var invertible = false
-            let normalMatrix = GLKMatrix3InvertAndTranspose(GLKMatrix4GetMatrix3(modelMatrix),
-                                                            &invertible)
-            glUniformMatrix3fv(normalMatrixLoc,
-                               1,
-                               GLboolean(GL_FALSE),
-                               normalMatrix.array)
-
             node.draw(elapsedTime: elapsedTime,
                       program: glslProgram)
         }
