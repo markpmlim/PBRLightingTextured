@@ -23,16 +23,6 @@ Given below is a window capture of the output rendered by the demo **pbrLighting
 ![](Documentation/PBRLightingTextured.png)
 
 
-**Bug(s)**
-
-Fix a bug in the vertex shader.
-
-```glsl
-
-    worldNormal = normalize(uNormalMatrix * mcNormal);
-
-```
-
 **Requirements:**
 
 Compiled with XCode 8.3.2 running under macOS 10.12 (Sierra)
