@@ -20,8 +20,12 @@ void main( )
 
     // Calculate normal (N) vectors in world space from incoming object/model space vectors.
     // Append a 0 to mcNormal because it is a vector not a position.
-    //worldNormal = normalize(uNormalMatrix * mcNormal);
     worldNormal = normalize(vec3(uModelMatrix * vec4(mcNormal, 0.0)));
+
+    // The worldNormal vector can also be transformed using one of the statements below
+    // as long as there is no shearing or non-uniform scaling.
+    //worldNormal = normalize(uNormalMatrix * mcNormal);
+    //worldNormal = normalize(mat3(uModelMatrix) * mcNormal);
 
     vST = mcTexCoord0.st;
     // Transform to clip space.
