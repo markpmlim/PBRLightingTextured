@@ -11,6 +11,7 @@ out vec2 vST;
 uniform mat4 uModelMatrix;
 uniform mat4 uViewMatrix;
 uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
 
 void main( )
 {
@@ -19,6 +20,7 @@ void main( )
 
     // Calculate normal (N) vectors in world space from incoming object/model space vectors.
     // Append a 0 to mcNormal because it is a vector not a position.
+    //worldNormal = normalize(uNormalMatrix * mcNormal);
     worldNormal = normalize(vec3(uModelMatrix * vec4(mcNormal, 0.0)));
 
     vST = mcTexCoord0.st;
