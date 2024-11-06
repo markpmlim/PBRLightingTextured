@@ -147,7 +147,7 @@ class OpenGLRenderer: NSObject
                                 normalAttributeNamed: MDLVertexAttributeNormal,
                                 tangentAttributeNamed: MDLVertexAttributeTangent)
  */
-        // Note: the tangent basis may not be non-orthogonal
+        // The method below will return tangents that are orthogonal to the normal.
         mdlMesh.addTangentBasis(forTextureCoordinateAttributeNamed: MDLVertexAttributeTextureCoordinate,
                                 normalAttributeNamed: MDLVertexAttributeNormal,
                                 tangentAttributeNamed: MDLVertexAttributeTangent)
@@ -199,6 +199,7 @@ class OpenGLRenderer: NSObject
         glUseProgram(glslProgram)
         let viewMatrixLoc = glGetUniformLocation(glslProgram, "uViewMatrix")
         let projectionMatrixLoc = glGetUniformLocation(glslProgram, "uProjectionMatrix")
+        let normalMatrixLoc = glGetUniformLocation(glslProgram, "uNormalMatrix")
 
         let orientationMatrix = GLKMatrix4MakeWithQuaternion(camera.orientation)
         viewMatrix = GLKMatrix4Multiply(camera.viewMatrix, orientationMatrix)
@@ -228,6 +229,16 @@ class OpenGLRenderer: NSObject
                            projectionMatrix.array)
 
         for node in nodes {
+            let modelMatrix = node.worldTransform
+            var isInvertible: Bool = false
+            let normalMatrix = GLKMatrix3InvertAndTranspose(GLKMatrix4GetMatrix3(modelMatrix),
+                                                                                 &isInvertible)
+            // If there is no shearing or non-uniform scaling, the normal matrix is
+            // the upperLeft3x3 sub-matrix of the modelMatrix.
+            glUniformMatrix3fv(normalMatrixLoc,
+                               1,
+                               GLboolean(GL_FALSE),
+                               normalMatrix.array)
             node.draw(elapsedTime: elapsedTime,
                       program: glslProgram)
         }
