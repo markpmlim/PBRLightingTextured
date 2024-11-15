@@ -23,6 +23,12 @@ Given below is a window capture of the output rendered by the demo **pbrLighting
 ![](Documentation/PBRLightingTextured.png)
 
 
+Given below is the output of the MetalPBR demo made available by Warren Moore. The source code was modified to render an output similar to the above.
+
+
+![](Documentation/MetalPBR.png)
+
+
 **Requirements:**
 
 Compiled with XCode 8.3.2 running under macOS 10.12 (Sierra)
